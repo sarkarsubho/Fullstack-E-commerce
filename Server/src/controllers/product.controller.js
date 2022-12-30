@@ -11,6 +11,16 @@ router.get("/",async(req,res)=>{
         return res.status(500).send({error:er})
     }
 })
+
+router.get("/category",async(req,res)=>{
+  try{
+      return res.status(200).send("data received")
+
+  }catch(er){
+
+      return res.status(500).send({error:er})
+  }
+})
 router.post("/create", async (req, res) => {
     try {
       let product =await Product.create(req.body);

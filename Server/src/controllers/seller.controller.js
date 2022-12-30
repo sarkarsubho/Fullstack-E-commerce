@@ -21,4 +21,8 @@ router.post("/create", async (req, res) => {
       return res.status(500).send({ error: er });
     }
   });
+
+  router.get("/",async(req,res)=>{
+    
+  })
 module.exports=router;

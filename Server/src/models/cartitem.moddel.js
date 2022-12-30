@@ -16,6 +16,7 @@ const CartSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "product",
       required: true,
+      
     },
     name: { type: String, required: true },
     image: [{ type: String, required: true }],
@@ -29,7 +30,7 @@ const CartSchema = new mongoose.Schema(
       l: { type: Boolean, required: true },
       xl: { type: Boolean, required: true },
     },
-    color: [{ type: String, required: true }],
+    color: { type: String, required: true },
     quantity: { type: Number, required: true },
   },
   { versionKey: false, timestamps: true }
