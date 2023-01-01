@@ -1,0 +1,29 @@
+.modal{
+position: fixed;
+z-index: 20;
+backdrop-filter: blur(4px);
+width: 100vw;
+height: 100vh;
+display: grid;
+place-items: center;
+}
+.modal>div{
+    background-color: gray;
+    padding: 10px;
+    height: inherit;
+    width: 250px;
+    position:absolute;
+    left: 0;
+    top: 0;
+    animation: .3s ease-in anima;
+    /* transition: width 300ms; */
+}
+
+@keyframes anima{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 250px;
+    }
+}
