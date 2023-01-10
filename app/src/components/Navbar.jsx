@@ -16,19 +16,20 @@ import {
   Input,
 } from "@chakra-ui/react";
 import { BiChevronUp, BiChevronDown } from "react-icons/bi";
-import { GiHamburgerMenu } from "react-icons/gi";
+
 import { IoPersonSharp } from "react-icons/io5";
+import NavDrawer from "./Drawer";
 
 export const Navbar = () => {
-  const [modal, setModal] = useState(true);
-  const handleModal = (event) => {
-    setModal(!modal);
-    event.stopPropagation();
-  };
+  // const [modal, setModal] = useState(true);
+  // const handleModal = (event) => {
+  //   setModal(!modal);
+  //   event.stopPropagation();
+  // };
   return (
     <Box background={"#287ff0"} padding={"10px"}>
       <Flex
-        width={["90%", "90%", "90%", "60%"]}
+        width={["90%", "90%", "90%", "70%"]}
         margin={"auto"}
         gap={"10px"}
         justifyContent={"space-between"}
@@ -119,11 +120,11 @@ export const Navbar = () => {
         </Flex>
       </Flex>
       {/* Mobile Nav */}
-      <Flex direction={"column"} display={["flex","none","none","none"]}>
+      <Flex direction={"column"} display={["flex", "none", "none", "none"]}>
         <Flex padding={"10px "} justifyContent={"space-between"}>
-          <Flex gap={"12px"} justifyContent={"center"} alignItems={"center"}>
-            <Box fontSize={"28PX"} color={"white"}>
-              <GiHamburgerMenu />
+          <Flex  justifyContent={"center"} alignItems={"center"}>
+            <Box  color={"white"}>
+              <NavDrawer></NavDrawer>
             </Box>
             <Image
               src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
